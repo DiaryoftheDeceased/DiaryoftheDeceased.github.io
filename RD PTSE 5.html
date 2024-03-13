@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACW</title>
+    <style>
+        /* Basic CSS for menu styling */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #422206;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #EBCF9B;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #B99F70;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#poem">Poem</a></li>
+  <li><a href="#art">Art</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<div id="home" style="padding:20px;">
+  <h2>ACW</h2>
+  <p>What words feel like.</p>
+</div>
+
+<div id="poem" style="padding:20px;display:none;">
+    <h2>Poems</h2>
+    <p>Structured words I create.</p>
+    <h2>Yet to be written</h2>
+  <p>· Heaven's Fool
+     · Maiden In Distress
+     · Gothic Castle
+     · Magical Garden
+     · Nychthemeron copy
+     · Lilacscape
+     · Wintry Journie
+     · Another Life
+     · Tyrant's Ruler</p>
+  </div>
+
+<div id="art" style="padding:20px;display:none;">
+  <h2>Art</h2>
+  <p>Visuals to dwell with the words I write.</p>
+</div>
+
+<div id="contact" style="padding:20px;display:none;">
+  <h2>Contact</h2>
+  <p>Feel free to say anything.</p>
+  <h2>acwrites00@gmail.com</h2>
+</div>
+
+<script>
+// JavaScript for showing/hiding content based on menu clicks
+document.querySelectorAll('ul li a').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        let target = event.target.getAttribute('href').substring(1);
+        document.querySelectorAll('div').forEach(div => {
+            div.style.display = 'none';
+        });
+        document.getElementById(target).style.display = 'block';
+    });
+});
+</script>
+
+</body>
+</html>
