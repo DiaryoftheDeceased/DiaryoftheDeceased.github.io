@@ -38,18 +38,35 @@
   <li><a href="#Writings">Writings</a></li>
 </ul>
 
-<div id="home" class="content" style="padding:20px;">
+<div id="home" style="padding:20px;">
   <h2>Diary of the Deceased</h2>
   <p>What life (everything) feels like.</p>
 </div>
 
-<div id="Writings" class="content" style="padding:20px;display:none;">
+<div id="Writings" style="padding:20px;display:none;">
     <h2>Writings</h2>
     <p>Ghcst with a pen.</p> 
     <a href="entry_1.html">Entry 1</a><br>
     <a href="entry_2.html">Entry 2</a><br> 
     <a href="entry_3.html">Entry 3</a><br> 
-    <!-- Add other entries -->
+    <a href="entry_4.html">Entry 4</a><br>
+    <a href="entry_5.html">Entry 5</a><br>
+    <a href="entry_6.html">Entry 6</a><br>
+    <a href="entry_7.html">Entry 7</a><br>
+    <a href="entry_8.html">Entry 8</a><br>
+    <a href="entry_9.html">Entry 9</a><br>
+    <a href="entry_10.html">Entry 10</a><br>
+    <p style="margin-bottom:0.5px;">&nbsp;</p>
+    <a href="entry_11.html">Entry 11</a><br>
+    <a href="entry_12.html">Entry 12</a><br>
+    <a href="entry_13.html">Entry 13</a><br>
+    <a href="entry_14.html">Entry 14</a><br>
+    <a href="entry_15.html">Entry 15</a><br> 
+    <a href="entry_16.html">Entry 16</a><br> 
+    <a href="entry_17.html">Entry 17</a><br>
+    <a href="entry_18.html">Entry 18</a><br>
+    <a href="entry_19.html">Entry 19</a><br>
+    <a href="entry_20.html">Entry 20</a><br>
     <p style="margin-bottom:0.5px;">&nbsp;</p>
     <a href="entry_21.html">Entry 21</a><br>
 </div>
@@ -60,7 +77,7 @@ document.querySelectorAll('ul li a').forEach(item => {
     item.addEventListener('click', event => {
         event.preventDefault();
         let target = event.target.getAttribute('href').substring(1);
-        document.querySelectorAll('div.content').forEach(div => {
+        document.querySelectorAll('div').forEach(div => {
             div.style.display = 'none';
         });
         document.getElementById(target).style.display = 'block';
